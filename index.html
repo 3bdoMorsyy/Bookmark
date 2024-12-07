@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <!-- Icon -->
+    <link
+      rel="icon"
+      href="https://routeacademy.github.io/Bookmarker/images/bookmark.png"
+    />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="p-5">Bookmarker</h1>
+      <div class="bookmark-section p-4">
+        <h2>
+          <span><i class="fa-solid fa-bookmark"></i> </span>Bookmark your
+          favorite sites <span><i class="fa-solid fa-bookmark"></i></span>
+        </h2>
+        <div class="mb-3">
+          <label for="siteName" class="form-label"
+            ><span><i class="fa-solid fa-book-bookmark"></i> </span>Site
+            Name</label
+          >
+          <input
+            type="text"
+            onkeyup="validateName()"
+            id="nameInput"
+            class="form-control"
+            id="siteName"
+            placeholder="Bookmark Name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="siteURL" class="form-label"
+            ><span><i class="fa-solid fa-link"></i> </span> Site URL</label
+          >
+          <input
+            type="text"
+            onkeyup="validateUrl()"
+            id="UrlInput"
+            class="form-control"
+            id="siteURL"
+            placeholder="Website URL"
+          />
+        </div>
+        <button onclick="addElement()" class="btn btn-submit px-5 py-2">
+          Submit
+        </button>
+      </div>
+      <div class="data">
+        <table class="table text-center mt-5">
+          <thead>
+            <tr>
+              <th scope="col">Index</th>
+              <th scope="col">Website Name</th>
+              <th scope="col">Visit</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
