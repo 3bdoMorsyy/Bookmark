@@ -73,12 +73,7 @@ function validateUrl() {
 }
 
 function validateName() {
-  if (
-    nameInput.value.match(
-      /^(https?:\/\/)([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/[a-zA-Z0-9\-._~:/?#[\]@!$&'()*+,;=]*)?$/
-    ) ||
-    nameInput.value == ""
-  ) {
+  if (nameInput.value == "") {
     nameInput.classList.add("is-invalid");
   } else {
     nameInput.classList.remove("is-invalid");
