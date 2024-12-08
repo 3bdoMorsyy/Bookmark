@@ -7,8 +7,8 @@ display();
 
 function addElement() {
   if (
-    urlInput.classList.contains("is-valid") &&
-    nameInput.classList.contains("is-valid")
+    !urlInput.classList.contains("is-invalid") &&
+    !nameInput.classList.contains("is-invalid")
   ) {
     site = {
       name: nameInput.value,
